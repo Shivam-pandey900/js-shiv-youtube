@@ -27,3 +27,6 @@ let state;
 
 console.log(typeof undefined) // undefined
 console.log(typeof null); // object
+
+
+// for notes and articles use: mdn website and tc39 website (mainly for js).
