@@ -64,3 +64,31 @@ console.log(myfunction);
 
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Types of Memory: 
+// 2 types : Stack (primitive)  and  Heap (non- primitive)
+
+let userone = "shiv@google.com"
+
+let usertwo = userone   // a copy ot the userone is provided to usertwo
+
+usertwo = "shyam@google.com"
+
+console.log(userone);
+console.log(usertwo);
+
+
+let user1 = {
+    name : "shivam",
+    roll : 58
+}
+
+let user2 = user1  // same reference is assigned to user2
+
+user2.name = "shyma"
+
+console.log(user1.name);
+console.log(user2.name);
+
