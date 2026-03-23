@@ -25,6 +25,8 @@ console.log(st); // 100
 // "" => false
 // "hitesh" => true
 
+//***************Operations***************/
+
 let val = 10
 let negval = -val
 // console.log(negval); // -10
