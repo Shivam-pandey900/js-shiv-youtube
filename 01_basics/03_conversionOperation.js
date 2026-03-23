@@ -39,19 +39,20 @@ console.log(st3);
 
 console.log(1 + "ab")
 console.log("ab" + 1 + 1); // ab11
+console.log(1 + 1 + "ab") // 2ab
 
-console.log(+true); // 1
-console.log(+""); // 0
+// console.log(+true); // 1
+// console.log(+""); // 0
 
 let num1, num2, num3
 
 num1 = num2 = num3 = 2 + 2
 
-console.log(num2) // 4
+// console.log(num2) // 4
 
 let gameCounter = 100
 ++gameCounter;
-console.log(gameCounter);
+// console.log(gameCounter);
 
 // link to study
 // https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
