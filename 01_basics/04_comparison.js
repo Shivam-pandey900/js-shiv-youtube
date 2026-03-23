@@ -14,3 +14,5 @@ console.log(undefined < 0)
 console.log("2" === 2);
 console.log(2 === 2);
 
+// for learning purpose or exams we write these types of messy or confusing codes but in companies 
+// we need to write clean codes that are readable, easy to understand.
