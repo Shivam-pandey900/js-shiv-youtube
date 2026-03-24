@@ -18,8 +18,8 @@ let date = new Date()
 // console.log(date.getFullYear());    // 2026
 // console.log(date.getHours());
 
-let mycreatedDate = new Date(2025, 05, 16)
-let mycreatedDate1 = new Date(2025, 05, 16, 12, 08)
+let mycreatedDate = new Date(2025, 5, 16)
+let mycreatedDate1 = new Date(2025, 5, 16, 12, 8)
 
 // console.log(mycreatedDate1.toLocaleString());  // 6/16/2025, 12:08:00 PM
 
