@@ -1,0 +1,23 @@
+js execution context:
+
+code( {..})  :   (I)   1. Global execution context  -  this is created .
+
+    2. Function execution context
+
+    3. Eval execution context  (part of 1)
+
+(II)  Memory Creation Phase
+
+(III)  Execution Phase   :  in this phase for every Function a specific combo of  new environment variable  + 
+                                                                                    Execution thread   is created . 
+
+                            Each combo phase contains its own : Memory phase   and   Execution phase.
+
+                            when a function is executed successfully the box with specific combo is deleted.
+
+
+
+
+
+Call stack:     It is like a stack which works on LIFO model in which first element is the Global Execution (this) and after
+                that each function in order is added in lifo order which gets executed and removed from the stack in the same order.
