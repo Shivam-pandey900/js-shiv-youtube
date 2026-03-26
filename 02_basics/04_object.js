@@ -43,12 +43,47 @@ const obj6 = {...obj2, ...obj4, ...obj3}  // spread operator takes all the prope
 
 const users = [ {id: 1, name: 'Alice'}, {id: 2, name: 'Bob'} ]
 
-console.log(users[1]["name"]);
+// console.log(users[1]["name"]);
 
-// console.log(Object.keys(obj6));
-// console.log(Object.values(obj6));
-console.log(Object.entries(obj6));
+// // console.log(Object.keys(obj6));
+// // console.log(Object.values(obj6));
+// console.log(Object.entries(obj6));
 
-console.log(obj6.hasOwnProperty('namee'));
-console.log(obj6.hasOwnProperty('namee55'));
+// console.log(obj6.hasOwnProperty('namee'));
+// console.log(obj6.hasOwnProperty('namee55'));
 
+
+// ++++++++++++++++++++++++ Object Destructuring ++++++++++++++++++++++++++++++++++++++++++++++++++
+
+const course = {
+    courseName : "js in hindi",
+    courseInstructor : "hitesh",
+    courseprice: "free"
+}
+
+// console.log(course.couseInstructor)
+
+const {courseInstructor} = course   // object destructure
+
+// console.log(courseInstructor);   
+
+const {courseInstructor: instructor} = course     // object destructuring with shorting element name.
+
+// console.log(instructor);
+
+
+// json intro:    it's an object with no name.
+
+{
+    "name" : "shivam",
+    "age" : 26,
+    "city" : "giridih"
+}
+
+// we can have array of objects .
+
+[
+    {},
+    {},
+    {},
+]
