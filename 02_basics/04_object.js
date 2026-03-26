@@ -74,16 +74,16 @@ const {courseInstructor: instructor} = course     // object destructuring with s
 
 // json intro:    it's an object with no name.
 
-{
-    "name" : "shivam",
-    "age" : 26,
-    "city" : "giridih"
-}
+// {
+//     "name" : "shivam",
+//     "age" : 26,
+//     "city" : "giridih"
+// }
 
 // we can have array of objects .
 
-[
-    {},
-    {},
-    {},
-]
+// [
+//     {},
+//     {},
+//     {},
+// ]
