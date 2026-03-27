@@ -1,10 +1,10 @@
-// for each loop
+// for each loop :  it requires a call back function with no name 
 
 // array
 
 const myprogramming = ['java', 'python', 'javascrip', 'c++']
 
-myprogramming.forEach( function(item) {
+myprogramming.forEach( function(item) {     // call back or arrow function definition is required.
     // console.log(item);
 });
 
