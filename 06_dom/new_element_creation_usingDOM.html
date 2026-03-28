@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    // we will create new elements in the document.
+    const h1 = document.createElement('h1')
+    console.log(h1);
+    h1.id = Math.round(Math.random() * 10 + 1)
+    h1.className = 'class'
+    
+    // most optimized way to add attributes is using setAttribute.
+
+    h1.setAttribute('title','class5')
+    console.log(h1.title);
+    h1.style.backgroundColor= 'orange'
+    h1.style.color = 'black'
+    h1.innerText = 'Shiwam Pandey'
+
+    // another way to add text element in a node.
+
+    // const text = document.createTextNode('Shiwam pandey')
+    // h1.appendChild(text)
+
+    // h1.style.padding='15px'
+    document.body.appendChild(h1)
+    h1.style.padding = '15px'
+
+</script>
+</html>
