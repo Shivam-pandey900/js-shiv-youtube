@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName){
+        const lang = document.createElement('li')
+        lang.innerText = langName
+        document.querySelector('.language').appendChild(lang)
+    }
+    addLang('Java')
+    addLang('Python')
+    addLang('Golang')
+
+    //optimised way of doing it:
+
+    function optiAddLang(langName){
+        const lang = document.createElement('li')
+        lang.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(lang)
+    }
+    optiAddLang('c++')
+    optiAddLang('css')
+
+    // Edit:
+    const third = document.querySelector('li:nth-child(3)')
+    console.log(third);
+    let newUpdate = document.createElement('li')
+    newUpdate.appendChild(document.createTextNode('HTML'))
+    third.replaceWith(newUpdate)
+
+    // second way to edit:
+    const first = document.querySelector('li:first-child')
+    first.outerHTML = '<li>TypeScript</li>'
+
+    // remove an element:
+    const last = document.querySelector('li:last-child')
+    last.remove()
+    
+</script>
+</html>
