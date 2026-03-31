@@ -193,3 +193,174 @@ function startOver() {
 
 
 ```
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Guess the Number - Game</title>
+</head>
+<body>
+  <nav>
+    <a href= "/" aria-current = 'page'>Home</a>
+    <a href= "https://github.com/Shivam-pandey900" >MyGitHubProfile</a>
+  </nav>
+
+  <div class="main">
+    <h1>Number Guessing Game</h1>
+    <p id="text">Try and guess a random number between 0 and 100.</p>
+    <p>You have 10 attempts to guess the right number.</p>
+    <br>
+    <form id="form">
+      <p class="heading">Guess a Number</p>
+      <input type="text" id="input-guess" placeholder="Enter"><br>
+      <input type="submit" id="submit-guess" value="Submit Guess">
+    </form>
+
+    <div class="paras">
+      <p>Previous Guesses: <span id="prev-guesses"></span></p>
+      <p>Guesses Remaining: <span id="guess-rem">10</span></p>
+      <p class = "guess-result"></p>
+    </div>
+  </div>
+</body>
+<script src="shivam.js"></script>
+</html>
+
+```
+
+``` css
+h1 {
+  text-align: center;
+  background-color: black;
+}
+
+.main {
+  background-color: #474747;
+  text-align: center;
+  height: 650px;
+}
+
+#text{
+  margin-top: 30px;
+}
+
+
+.heading{
+  font-size: 55px;
+  margin-top: 0px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+#input-guess{
+  color: black;
+  width: 270px;
+  height: 50px;
+  font-size: 30px;
+  border-style: none;
+  margin-top: 0px;
+  border: 5px solid gray;
+  text-align: center;
+}
+
+#submit-guess{
+  color: #fff;
+  width: 150px;
+  height: 40px;
+  background-color: black;
+  border-radius: 15px;
+  margin-top: 20px;
+  font-size: 20px;
+  border: none;
+}
+
+#startAgain{
+  background-color: green;
+  color: black;
+  font-size: 20px;
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.guess-result{
+  font-size: 40px;
+}
+
+```
+
+```css
+styles.css:
+
+* {
+  box-sizing: border-box;
+}
+
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  border-bottom: #fff;
+  background-color: #fff;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  min-width: 9rem;
+  padding: 0.5rem;
+  border: solid 1px #212121;
+  border-radius: 0.2rem;
+  text-align: center;
+  color: #212121;
+}
+
+body{
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #212121;
+  color: #fff;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#main {
+  background-color: #212121;
+}
+
+.projects{
+  display: flex;
+  flex-direction: column;
+}
+.project-link {
+  color: black;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px 30px;
+  border: 2px solid #212121;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+```
