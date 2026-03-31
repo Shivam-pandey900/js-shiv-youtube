@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Learning</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h1>Amazing Images</h1>
+    <div>
+        <ul class="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" width="200px" id="japan" alt="photoshop"></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            // one way to add event listener .
+
+            <!-- <li><img onclick="alert('owl clicked')" width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li> -->
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a href="https://www.google.com " id="google" style="color: aliceblue;">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    document.querySelector('#owl').addEventListener('click',function(e){
+        // console.log(e);
+        // alert('owl clicked')
+        console.log('clicked the owl');
+    },false)
+
+    // here third parameter is called default propagation.
+
+    // attachEvent()
+    // jQuery - on
+
+    // event has many properties, some of them are-
+
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // now we will add one more eventListener on click. and try to understand which one will get printed first.
+
+    document.querySelector('.images').addEventListener('click',function(e){
+        // alert('clicked on ul')
+        console.log('clicked on ul');
+    },false)
+
+    // this works as bubble propagation , first small and goes on increasing.
+
+    // we can prevent this by using stopPropagation method.
+
+    // document.querySelector('#owl').addEventListener('click',function(e){
+    //     // console.log(e);
+    //     // alert('owl clicked')
+    //     console.log('clicked the owl');
+    //     e.stopPropagation();
+    // },false)
+
+    // writing false is option in every event it is written by default.
+
+    document.querySelector('#google').addEventListener('click',function(e){
+        e.preventDefault()
+    })
+
+    // now task is when one clicks on any image it must get removed from the document.
+
+    document.querySelector('.images').addEventListener('click',function(e){
+        // console.log(e.target);
+        console.log(e.target.tagName);
+        console.log(e.target.parentNode);
+        
+        const target = e.target
+
+        if(target.tagName == 'IMG'){
+            // target.parentNode.remove()     //  or 
+            target.parentNode.parentNode.removeChild(target.parentNode)
+        }
+
+    })
+
+</script>
+</html>
