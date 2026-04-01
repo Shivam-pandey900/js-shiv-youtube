@@ -1,0 +1,25 @@
+javascript-
+
+        1. Synchronous,
+        2. Single Threaded.
+    
+* They are default operations of js.
+
+Execution Context -  execute one line of code at a time.
+
+    | console log 1               * Each operation wait for the last one to 
+    | console log 2                 complete its execution to get executed.
+    ...
+
+        CALL STACK    AND    MEMORY HEAP   USED.
+
+
+  Blocking Code     vs    Non Blocking Code
+
+1. Blocks the           Does not block the execution.
+    flow of program     
+
+2. Read File Sync       Read File Async.
+
+
+

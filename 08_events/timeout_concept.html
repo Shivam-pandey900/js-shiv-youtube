@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: #fff">
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     document.querySelector('h1').innerHTML = 'Radhe aur Shyam'
+    // },2000)
+
+    // another way to do so :
+
+    // const changeText = function() {
+    //     document.querySelector('h1').innerHTML = 'Radhe aur Shyam'
+    // }
+
+    // setTimeout(changeText,2000)
+
+    // one more way to do so :
+
+    const angeText = function(text) {
+        document.querySelector('h1').innerHTML = text
+    }
+
+    // setTimeout(angeText,2000,'Shiwam')
+
+    // to remove this timeout function: 
+
+    const text = setTimeout(angeText,2000,'Shiwam')
+
+    // clearTimeout(text)
+
+    // now we want to remove the clear timeout using some event.
+
+    document.querySelector('#stop').addEventListener('click',function(e){
+        console.log('timeout removed')
+        clearTimeout(text)
+    })
+
+</script>
+</html>

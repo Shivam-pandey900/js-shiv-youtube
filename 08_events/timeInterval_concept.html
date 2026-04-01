@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: #fff">
+    <h1>Chai aur Code</h1>
+    <button id="start">Start</button>
+    <button class="stop">Stop</button>
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log(`Shivam ${Date.now()}`);
+        
+    //     document.querySelector('h1').innerHTML = `Radhe aur Shyam ${Date.now()}`
+    // },1000)
+
+    const change = function(){
+        console.log(`Shivam ${Date.now()}`);
+        
+        document.querySelector('h1').innerHTML = `Radhe aur Shyam ${Date.now()}`
+    }
+
+    // setInterval(change,1000)
+
+    const time = setInterval(change,1000)
+
+    clearInterval(time)
+    console.log(clearInterval(time))
+
+
+    // now let's do 2 projects.
+    
+</script>
+</html>

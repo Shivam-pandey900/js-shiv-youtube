@@ -24,7 +24,7 @@
 </body>
 <script>
     document.querySelector('#owl').addEventListener('click',function(e){
-        // console.log(e);
+        console.log(e);
         // alert('owl clicked')
         console.log('clicked the owl');
     },false)
@@ -68,19 +68,19 @@
 
     // now task is when one clicks on any image it must get removed from the document.
 
-    document.querySelector('.images').addEventListener('click',function(e){
-        // console.log(e.target);
-        console.log(e.target.tagName);
-        console.log(e.target.parentNode);
+    // document.querySelector('.images').addEventListener('click',function(e){
+    //     // console.log(e.target);
+    //     console.log(e.target.tagName);
+    //     console.log(e.target.parentNode);
         
-        const target = e.target
+    //     const target = e.target
 
-        if(target.tagName == 'IMG'){
-            // target.parentNode.remove()     //  or 
-            target.parentNode.parentNode.removeChild(target.parentNode)
-        }
+    //     if(target.tagName == 'IMG'){
+    //         // target.parentNode.remove()     //  or 
+    //         target.parentNode.parentNode.removeChild(target.parentNode)
+    //     }
 
-    })
+    // })
 
 </script>
 </html>

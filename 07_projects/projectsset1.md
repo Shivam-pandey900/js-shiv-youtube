@@ -364,3 +364,143 @@ h1 {
 }
 
 ```
+
+## Project 5 solution code
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Document</title>
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 2px solid #fff;
+        font-size: 50px;
+      }
+      #insert {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a href="https://github.com/Shivam-pandey900">MyGitHubProfile</a>
+    </nav>
+    <div id="insert">
+      <h1>Press any key and watch magic</h1>
+    </div>
+  </body>
+  <script src="shivam.js"></script>
+</html>
+
+```
+```javascript
+const insert = document.querySelector('#insert')
+
+window.addEventListener('keydown',(e) => {
+  console.log(e)
+  insert.innerHTML = `<table>
+  <tr>
+  <th>Key</th>
+  <th>KeyCode</th>
+  <th>Code</th>
+  </tr>
+  <tr>
+  <td>${e.key === ' '? 'space' :e.key} </td>
+  <td>${e.keyCode} </td>
+  <td>${e.code} </td>
+  </tr>
+  </table>`
+})
+```
+
+## Project 6 Solution Code
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Document</title>
+  <style>
+     #main{
+      align-items: center;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    button{
+      width: 80px;
+      height: 50px;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body style=" color:#fff;">
+  <nav>
+    <a href="/" aria-current="page">Home</a>
+    <a href="https://github.com/Shivam-pandey900">MyGitHubProfile</a>
+  </nav>
+  <div id="main">
+    <h1>Start should change the Background color every second</h1>
+    <button id= "start"> Start</button><br>
+    <button id="stop">Stop</button>
+  </div>
+</body>
+<script src="shivam.js"></script>
+</html>
+```
+
+```javascript
+// generate random color.
+
+const hexCodes = '0123456789abcdef';
+
+// hexcode is of 6 digits.
+
+let randomColor = function () {
+  let hexval = '#';
+  for (let i = 0; i < 6; i++) {
+    hexval += hexCodes[Math.floor(Math.random() * 16)];
+  }
+  return hexval;
+};
+
+let intervalId;
+
+const startChangingColor = function () {
+  let changeBackgroundColor = function () {
+    // console.log('in func1')
+    document.body.style.backgroundColor = randomColor();
+  };
+
+  if (intervalId == null) intervalId = setInterval(changeBackgroundColor, 1000);
+};
+
+const stopChangingColor = function () {
+  clearInterval(intervalId);
+  intervalId = null;
+};
+
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
+```
