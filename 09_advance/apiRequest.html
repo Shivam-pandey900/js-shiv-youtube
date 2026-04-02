@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color:#fff">
+<!--     
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+
+<h1>Click the button to watch the magic</h1>
+<button class="click">Click</button>
+
+    
+</body>
+<script>
+    // we will now learn api request other than fetch .
+    // this api request was used before fetch came - XMLHttpRequest.
+
+    const myURL = 'https://api.github.com/users/Shivam-pandey900'
+    const hiteshURL = 'https://api.github.com/users/hiteshchoudhary'
+
+    const xhrObj = new XMLHttpRequest();
+    // console.log(xhrObj.readyState);
+    xhrObj.open('GET',hiteshURL)
+    // console.log(xhrObj.readyState);
+
+    // in order to prevent the state change we will use a different method which works
+    // asynchronously.
+
+    let imageUrl ;
+    let followers;
+
+    xhrObj.onreadystatechange = function(){
+      // console.log(xhrObj.readyState);
+      //   console.log(xhrObj.HEADERS_RECEIVED)
+      if(xhrObj.readyState === 3){
+        // console.log(this.responseText) ;
+      }
+      
+      const data=JSON.parse(this.responseText)
+
+      if(xhrObj.readyState === 4){
+            // console.log(this.responseText);
+            // console.log(this.responseText.followers)
+            console.log(typeof data)
+            console.log(data.followers)
+            console.log(data.avatar_url)
+            imageUrl = data.avatar_url;
+            followers = data.followers;
+      }
+    }
+
+    xhrObj.send();
+
+    document.querySelector('.click').addEventListener('click',function(e){
+      document.body.innerHTML = `<img src = ${imageUrl} alt = Image></img><br> Total Followers = ${followers}`
+    })
+
+</script>
+</html>
