@@ -4,9 +4,18 @@
 // Math.PI = 5
 // console.log(Math.PI)
 
+// const descriptors = Object.getOwnPropertyDescriptor(Math,'PI')
+
+Object.defineProperty(Math,'PI',{
+    writable: true,
+    enumerable: true,
+});
+
 const descriptors = Object.getOwnPropertyDescriptor(Math,'PI')
 
-// console.log(descriptors)
+
+
+console.log(descriptors)   // o/p: TypeError: Cannot redefine property: PI
 
 // o/p: {
 //   value: 3.141592653589793,
@@ -22,9 +31,9 @@ const obj = {
     email: 'shiv@tcs.com',
     pwd: '567',
 
-    checkPwd: function(){
-        console.log(`Password is: ${this.pwd}`)
-    }
+    // checkPwd: function(){
+        // console.log(`Password is: ${this.pwd}`)
+    // }
 }
 
 // const properties = Object.getOwnPropertyDescriptor(obj,'username')
@@ -39,15 +48,15 @@ Object.defineProperty(obj,'username',{
 });
 
 const properties = Object.getOwnPropertyDescriptor(obj,'username')
-console.log(properties)
+// console.log(properties)
 
 obj.username = 'Chai_aur_code'
 
-console.log(obj)    // o/p: { email: 'shiv@tcs.com', pwd: '567', checkPwd: [Function: checkPwd] }
+// console.log(obj)    // o/p: { email: 'shiv@tcs.com', pwd: '567', checkPwd: [Function: checkPwd] }
                     // username is not coming because i have defined a property 
                     // enumerable: false.
 
-console.log(obj.username)   // o/p: Shivam
+// console.log(obj.username)   // o/p: Shivam
 
 // for (const [key,value] of Object.entries(obj)) {
 //     console.log(`${key}: ${value}`)
@@ -63,6 +72,6 @@ console.log(obj.username)   // o/p: Shivam
 // we do not want that function to be printed like that
 
 for (const [key,value] of Object.entries(obj)) {
-    if(typeof value !== 'function')
-    console.log(`${key}: ${value}`)
+    // if(typeof value !== 'function')
+    // console.log(`${key}: ${value}`)
 }
